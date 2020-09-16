@@ -23,6 +23,7 @@ export default class App extends Component {
       number: null,
       profileImg:
         "https://thecvf.org/wp-content/uploads/2017/05/blank-user.png",
+      succes: false,
       errors: {
         name: "",
         email: "",
@@ -83,13 +84,21 @@ export default class App extends Component {
   };
   handleSubmit = (event) => {
     event.preventDefault();
-    if (this.state.name == null) {
-      alert("Wypełnij formularz!");
-    }
+
     if (validateForm(this.state.errors)) {
       console.info("Valid Form");
+      this.setState({ succes: true });
     } else {
       console.error("Invalid Form");
+    }
+    if (
+      this.state.name == null ||
+      this.state.email == null ||
+      this.state.phone == null ||
+      this.state.number == null
+    ) {
+      alert("Wypełnij formularz!");
+      this.setState({ succes: false });
     }
   };
 
@@ -102,6 +111,15 @@ export default class App extends Component {
           <div className="form">
             <p>Wypełnij formularz!</p>
             <img src={decoration} alt="Black line decoration" />
+            <div
+              className="succes"
+              style={{ display: this.state.succes === true ? "block" : "none" }}
+            >
+              {" "}
+              Wiadomość została wysłana!
+              <br />
+              Wkrótce się skontaktujemy
+            </div>
             <section className="mainView">
               <form className="form" onSubmit={this.handleSubmit} id="form">
                 <div className="nameEmail">
@@ -113,6 +131,7 @@ export default class App extends Component {
                       className="name"
                       onChange={this.handleChange}
                       noValidate
+                      placeholder="Podaj nazwę!"
                     />
                     <p className="error">{errors.name}</p>
                   </div>
@@ -124,6 +143,7 @@ export default class App extends Component {
                       name="email"
                       onChange={this.handleChange}
                       noValidate
+                      placeholder="Podaj email!"
                     />
                     <p className="error">{errors.email}</p>
                   </div>
@@ -135,6 +155,7 @@ export default class App extends Component {
                       name="phone"
                       onChange={this.handleChange}
                       noValidate
+                      placeholder="Podaj telefon!"
                     />
                     <p className="error">{errors.phone}</p>
                   </div>
@@ -146,6 +167,7 @@ export default class App extends Component {
                       name="number"
                       onChange={this.handleChange}
                       noValidate
+                      placeholder="Podaj numer!"
                     />
                     <p className="error">{errors.number}</p>
                   </div>
