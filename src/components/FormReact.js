@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import useInput from "./hooks/useInput";
 
 const FormReact = () => {
-  const [tab, setTab] = useState([8, 23, 32]);
+  const [tab, setTab] = useState([0, 1.08, 1.23, 1.32]);
   const [vat, setVat] = useInput("");
   const API = `http://localhost:3005/`;
   const [menu, setMenu] = useState([]);
@@ -15,6 +15,7 @@ const FormReact = () => {
     vatValue: "",
     brutto: ""
   });
+  const { number, name, quantity, netto, vatValue } = form;
   const handleFormData = (e) => {
     const { name, value } = e.target;
     setForm((prev) => ({
@@ -55,7 +56,7 @@ const FormReact = () => {
                   type="text"
                   placeholder={e.number}
                   name="number"
-                  value={e.number + "."}
+                  value={e.number}
                   onChange={handleFormData}
                   disabled
                 />
@@ -70,6 +71,7 @@ const FormReact = () => {
                   value={e.name}
                   name="name"
                   onChange={handleFormData}
+                  disabled
                 />
               </form>
             </td>
@@ -81,6 +83,7 @@ const FormReact = () => {
                   name="quantity"
                   value={e.quantity}
                   onChange={handleFormData}
+                  disabled
                 />
               </form>
             </td>
@@ -92,6 +95,7 @@ const FormReact = () => {
                   onChange={handleFormData}
                   name="netto"
                   value={e.netto}
+                  disabled
                 />
               </form>
             </td>
@@ -103,6 +107,7 @@ const FormReact = () => {
                   onChange={handleFormData}
                   name="vatValue"
                   value={e.vatValue}
+                  disabled
                 >
                   {tab?.map((el, index) => (
                     <option key={index}>{el}</option>
@@ -124,6 +129,80 @@ const FormReact = () => {
             </td>
           </tr>
         ))}
+        <tr>
+          <td className="tdView">
+            <form>
+              <input
+                type="number"
+                placeholder={number}
+                name="number"
+                value={number}
+                onChange={handleFormData}
+              />
+            </form>
+          </td>
+          <td className="tdView">
+            <form>
+              <input
+                type="text"
+                placeholder="Name"
+                {...disableInpProps}
+                value={name}
+                name="name"
+                onChange={handleFormData}
+              />
+            </form>
+          </td>
+          <td className="tdView">
+            <form>
+              <input
+                type="number"
+                placeholder="Ilość"
+                name="quantity"
+                value={quantity}
+                onChange={handleFormData}
+              />
+            </form>
+          </td>
+          <td className="tdView">
+            <form>
+              <input
+                type="number"
+                placeholder="Name"
+                onChange={handleFormData}
+                name="netto"
+                value={netto}
+              />
+            </form>
+          </td>
+          <td className="tdView">
+            <form>
+              <select
+                name="vat"
+                {...setVat}
+                onChange={handleFormData}
+                name="vatValue"
+                value={vatValue}
+              >
+                {tab?.map((el, index) => (
+                  <option key={index}>{el}</option>
+                ))}
+              </select>
+            </form>
+          </td>
+          <td className="tdView">
+            <form>
+              <input
+                type="number"
+                placeholder="Name"
+                disabled="disabled"
+                value={(quantity * netto * vatValue).toFixed(2)}
+                name="brutto"
+                onChange={handleFormData}
+              />
+            </form>
+          </td>
+        </tr>
       </tbody>
     </>
   );
