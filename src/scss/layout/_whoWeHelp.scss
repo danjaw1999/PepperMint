@@ -1,0 +1,101 @@
+.whoWeHelp {
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7rem;
+    p {
+      font-size: 3.8rem;
+      color: $mainHeader;
+      font-weight: 300;
+      margin-bottom: 3.9rem;
+    }
+  }
+}
+
+.menuListAbout {
+  .listAbout {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 6.5%;
+    .list {
+      font-size: 2.4rem;
+      font-weight: 300;
+      border: 0.75px solid rgba(0, 0, 0, 0);
+      padding: 2.3rem 4.2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: $listColor;
+    }
+    .list:active {
+      color: $listColor;
+    }
+    .list:visited {
+      color: $listColor;
+    }
+    .list:hover {
+      border: 0.75px solid #3c3c3c;
+    }
+    .listMid {
+      margin-left: 10.7rem;
+      margin-right: 10.7rem;
+    }
+  }
+}
+.container {
+  .mainList {
+    ul.namesOfSubjects {
+      li {
+        display: flex;
+        justify-content: space-between;
+        font-family: $font-alt;
+        margin-bottom: 3.4rem;
+        border-bottom: 2px solid #3c3c3c;
+        .leftSiteList {
+          .mainTextList {
+            font-size: 2.6rem;
+            font-weight: 300;
+            color: $mainTextList;
+            font-family: $font-alt!important;
+          }
+          .secondTextList {
+            font-size: 1.8rem;
+            font-family: $font-alt;
+            font-weight: 300;
+            font-style: italic;
+            margin-top: -4rem;
+          }
+        }
+        .rightSiteList {
+          display: flex;
+          align-items: center;
+          p {
+            font-family: $font-alt;
+            font-weight: 300;
+            font-size: 1.8rem;
+            color: $listColorRight;
+          }
+        }
+      }
+    }
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8rem;
+    li {
+      border: 1px solid rgba(0, 0, 0, 0);
+      cursor: pointer;
+      font-size: 1.8rem;
+      padding: 1.5rem 1.3rem;
+    }
+    li:hover {
+      border: 1px solid #707070;
+    }
+  }
+}
+.lastListName {
+  border-bottom: none !important;
+}

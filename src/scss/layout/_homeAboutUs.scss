@@ -1,0 +1,39 @@
+.aboutUs {
+  width: 100%;
+  display: flex;
+  .aboutUsText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $aboutUsContainerBgColor 0% 0% no-repeat padding-box;
+    font-weight: 300;
+    width: 50%;
+    p {
+      margin-top: 18.6rem;
+      font-size: 3.8rem;
+      color: $aboutUsShortTextColor;
+    }
+    img {
+      margin-top: 2.6rem;
+    }
+    img:nth-of-type(2) {
+      margin-left: 45rem;
+    }
+    span {
+      margin-top: 6.19rem;
+      font-size: 3rem;
+      text-align: center;
+      width: 65.6rem;
+      letter-spacing: -0.6px;
+      line-height: 5.4rem;
+      color: $aboutUsLongTextColor;
+    }
+  }
+  .people {
+    background-image: url("./../assets/People.jpg");
+    width: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 93.5rem;
+  }
+}

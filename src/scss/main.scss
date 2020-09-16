@@ -1,0 +1,21 @@
+@import "./base/fonts";
+@import "./base/reset";
+@import "./base/colors";
+
+//layout
+//layout Home
+@import "./layout/home";
+//layout whoWeHelp
+@import "./layout/whoWeHelp";
+@import "./layout/compList";
+//layout form
+@import "./layout/form";
+
+//layout logowanie
+@import "./layout/_logowanie";
+
+//layout registration
+@import "./layout/rejestracja";
+
+//layout logout
+@import "./layout/wylogowano";

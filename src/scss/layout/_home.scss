@@ -1,0 +1,12 @@
+//layout HomeHeader
+@import "./homeHeader";
+//layout HomeThreeColumns
+@import "./homeThreeColumns";
+//layout HomeFourSteps
+@import "./homeFourSteps";
+//layout HomeAboutUs
+@import "./homeAboutUs";
+.container {
+  max-width: 190rem;
+  margin: 0 auto;
+}
