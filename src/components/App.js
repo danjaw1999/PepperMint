@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Logowanie from "./Logowanie";
 import Rejestracja from "./Rejestracja";
 import Wylogowano from "./Wylogowano";
+import FormReact from "./FormReact";
 const App = () => {
   return (
     <BrowserRouter>
@@ -13,6 +14,7 @@ const App = () => {
           <Route path="/logowanie" component={Logowanie} />
           <Route path="/registration" component={Rejestracja} />
           <Route path="/wylogowano" component={Wylogowano} />
+          <Route path="/formularz" component={FormReact} />
         </Switch>
       </>
     </BrowserRouter>

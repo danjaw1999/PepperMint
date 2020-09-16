@@ -86,7 +86,6 @@ export default class App extends Component {
     event.preventDefault();
 
     if (validateForm(this.state.errors)) {
-      console.info("Valid Form");
       this.setState({ succes: true });
     } else {
       console.error("Invalid Form");

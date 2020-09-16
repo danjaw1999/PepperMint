@@ -52,6 +52,9 @@ const HomeHeader = () => {
                 >
                   Kontakt
                 </ScrollLink>
+                <NavLink to="/formularz" className="menuButtons">
+                  Formularz React
+                </NavLink>
               </ul>
             </section>
           </nav>

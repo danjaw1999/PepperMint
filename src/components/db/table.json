@@ -1,0 +1,20 @@
+{
+  "table": [
+    {
+      "number": 1,
+      "name": "",
+      "quantity": null,
+      "netto": null,
+      "vatValue": null,
+      "brutto": null
+    },
+    {
+      "number": 2,
+      "name": "",
+      "quantity": null,
+      "netto": 5,
+      "vatValue": 1.23,
+      "brutto": null
+    }
+  ]
+}
