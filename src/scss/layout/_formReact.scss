@@ -25,3 +25,16 @@ h1 {
 select {
   font-size: 2.4rem;
 }
+.btn {
+  border: 0.75px solid $headerBorderLineColor;
+  opacity: 1;
+  font-size: 1.6rem;
+  font-weight: 300;
+  letter-spacing: 0px;
+  color: $headerButtonTextColor;
+  height: 6rem;
+  width: 11rem;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+}

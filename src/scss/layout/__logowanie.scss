@@ -57,18 +57,4 @@
     }
   }
 }
-.buttonLog {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  .buttonLogg {
-    border: 0.75px solid rgba(0, 0, 0, 0);
-    background: transparent;
-    padding: 1.6rem 1.3rem;
-    font-size: 1.8rem;
-    margin-top: 4rem;
-  }
-  .buttonLogg:hover {
-    border: 0.75px solid #3c3c3c;
-  }
-}
+
