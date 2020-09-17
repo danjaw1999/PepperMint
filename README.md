@@ -6,7 +6,7 @@ In the project directory, you can run:
 
 ### First `npm i`
 
-### Second `json-server -w /src/components/table.json -p 3005`
+### Second `json-server -w /src/components/db/table.json -p 3005`
 
 ### Third `npm start`
 
