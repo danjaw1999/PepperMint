@@ -4,13 +4,17 @@
 
 In the project directory, you can run:
 
-### First `npm i`
+### First `cd peppermint`
 
-### Second `cd src/components/db` 
+### Second `npm i`
 
-### Third `npx json-server --watch table.json -p 3005`
+### Third `cd src/components/db` 
 
-### Fourth `npm start`
+### Fourth `npx json-server --watch table.json -p 3005`
+
+### Fifth `Open new terminal in folder PepperMint`
+
+### Sixth `npm start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
