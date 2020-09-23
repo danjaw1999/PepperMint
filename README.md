@@ -4,6 +4,8 @@
 
 In the project directory, you can run:
 
+Remember about GIT CLONE!!!
+
 ### First `cd peppermint`
 
 ### Second `npm i`
