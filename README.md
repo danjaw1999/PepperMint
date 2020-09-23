@@ -6,9 +6,11 @@ In the project directory, you can run:
 
 ### First `npm i`
 
-### Second `json-server -w /src/components/db/table.json -p 3005`
+### Second `cd src/components/db` 
 
-### Third `npm start`
+### Third `npx json-server --watch table.json -p 3005`
+
+### Fourth `npm start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
