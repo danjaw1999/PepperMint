@@ -15,3 +15,8 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+app.use(express.static(__dirname)); //here is important thing - no static directory, because all static :)
+
+app.get("/*", function(req, res) {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
