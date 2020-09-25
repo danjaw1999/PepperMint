@@ -4,7 +4,7 @@ import useInput from "./hooks/useInput";
 const FormReact = () => {
   const [tab, setTab] = useState([0, 8, 23, 32]);
   const [vat, setVat] = useInput("");
-  const API = `https://my-json-server.typicode.com/danjaw1999/PepperMint/db`;
+  const API = `https://my-json-server.typicode.com/danjaw1999/PepperMint/`;
   const [menu, setMenu] = useState([]);
   const [isDisabled, setIsDisabled] = useState(true);
   const [form, setForm] = useState({
