@@ -1,0 +1,13 @@
+{
+  "table": [
+    {
+      "id": 1,
+      "number": 1,
+      "name": "Masło",
+      "quantity": 1,
+      "netto": 5,
+      "vatValue": 23,
+      "brutto": null
+    }
+  ]
+}

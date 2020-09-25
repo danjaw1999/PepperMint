@@ -63,7 +63,7 @@ const FormReact = () => {
       .catch((error) => {
         console.log(error);
       });
-    window.location.reload(true);
+    // window.location.reload(true);
   };
 
   return (
